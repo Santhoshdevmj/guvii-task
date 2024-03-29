@@ -1,0 +1,31 @@
+Get IP address of a domain (guvi.in): You can use the dig command to fetch the IP address of a domain. Here's how to do it:
+
+    >dig +short guvi.in
+
+Check CPU/Memory usage: You can use the top command to monitor CPU and memory usage. Here's how to use it:
+
+    >top
+
+Alternatively, you can use the htop command, which provides a more interactive and user-friendly interface:
+
+    >htop
+
+Test connectivity between two nodes: You can use the ping command to test connectivity between two nodes:
+
+    >ping <IP_or_hostname_of_other_node>
+
+Replace <IP_or_hostname_of_other_node> with the IP address or hostname of the other node.
+
+Check if a port is open: You can use the nc (netcat) command to check if a port is open:
+
+    >nc -zv <hostname_or_IP> <port_number>
+
+Replace <hostname_or_IP> with the hostname or IP address of the server and <port_number> with the port you want to check. If the port is open, you will see a success message; otherwise, you'll see a failure message.
+
+To troubleshoot why you can't view the page of your deployed application:
+
+Check if the application is running: You mentioned that the logs show your app is running. Ensure there are no errors in the logs.
+
+Check if the port is open: Use the nc command to check if the port (9000 in your case) is open on the server where your application is deployed:
+
+    >nc -zv guvi.com 9000
