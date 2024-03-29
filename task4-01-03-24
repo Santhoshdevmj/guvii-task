@@ -1,0 +1,49 @@
+To install Docker on an EC2 instance and explore Docker commands, you can follow these steps:
+
+Connect to your EC2 instance: Use SSH to connect to your EC2 instance.
+
+Update the package index: Run the following command to update the package index:
+    >sudo apt update -y
+
+Install Docker: Install Docker using the following commands:
+    >sudo apt install -y docker
+
+Start the Docker service: Start the Docker service using the following command:
+    >sudo service docker start
+
+Enable Docker service: Enable the Docker service to start on boot:
+    >sudo systemctl enable docker
+
+Verify Docker installation: Check if Docker is installed correctly by running:
+    >docker --version
+
+Now that Docker is installed on your EC2 instance, you can explore various Docker commands to manage images, containers, volumes, and networks.
+
+Here are some commonly used Docker commands:
+
+docker images: List all the images available on the system.
+    >docker images
+
+docker ps: List all the running containers.
+    >docker ps
+
+docker ps -a: List all containers (running and stopped).
+    >docker ps -a
+
+docker run: Create and start a new container from an image.
+    >docker run <image_name>
+
+docker stop: Stop a running container.
+    >docker stop <container_id>
+
+docker rm: Remove one or more containers.
+    >docker rm <container_id>
+
+docker volume ls: List all volumes.
+    >docker volume ls
+
+docker network ls: List all networks.
+    >docker network ls
+
+docker exec: Run a command inside a running container.
+    >docker exec -it <container_id> <command>
