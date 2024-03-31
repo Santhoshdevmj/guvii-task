@@ -1,0 +1,41 @@
+Set up AWS CodeCommit:
+
+Go to the AWS Management Console and navigate to AWS CodeCommit.
+Create a new CodeCommit repository where you will store your Nginx configuration files and static content.
+Clone the CodeCommit Repository:
+
+Clone the CodeCommit repository to your local machine using Git.
+Create Nginx Configuration and Static Content:
+
+Create an Nginx configuration file (e.g., nginx.conf) and any static content (e.g., HTML, CSS, JS files) that you want to serve.
+Place these files in the local Git repository directory.
+Commit and Push Changes:
+
+Add the newly created files to the repository and commit the changes.
+Push the changes to the CodeCommit repository.
+Set up AWS CodeDeploy:
+
+Go to the AWS Management Console and navigate to AWS CodeDeploy.
+Create a new CodeDeploy application and deployment group.
+Create an AppSpec File:
+
+Create an appspec.yml file in the root of your Git repository.
+This file defines the deployment process for CodeDeploy.
+Create a Deployment Script:
+
+Create a deployment script (e.g., deploy.sh) to copy the Nginx configuration files and static content to the appropriate location on the EC2 instance.
+Create an EC2 Instance:
+
+Launch an EC2 instance where you will deploy the Nginx application.
+Make sure to configure security groups to allow HTTP traffic (port 80).
+Install and Configure Nginx on the EC2 Instance:
+
+SSH into the EC2 instance and install Nginx.
+Configure Nginx to serve the static content and use the Nginx configuration files from the CodeCommit repository.
+Deploy the Application:
+
+Use CodeDeploy to deploy the application to the EC2 instance.
+Monitor the deployment process in the CodeDeploy console.
+Access the Application via Browser:
+
+Once the deployment is successful, you should be able to access the Nginx application via the public IP address or public DNS name of the EC2 instance in a web browser.
