@@ -1,0 +1,28 @@
+Create a VPC with an Internet Gateway:
+
+    Go to the VPC dashboard in the AWS Management Console.
+    Click on "Create VPC" and provide the necessary details such as CIDR block (e.g., 10.0.0.0/16).
+    Once the VPC is created, click on "Internet Gateways" in the left panel.
+    Click on "Create internet gateway", give it a name, and then attach it to your VPC.
+    Create a Public Subnet with 256 IP addresses:
+
+Go to the Subnets section in the VPC dashboard.
+    Click on "Create subnet" and provide the VPC, availability zone, and CIDR block (e.g., 10.0.0.0/24).
+    Ensure that "Auto-assign public IPv4 address" is enabled.
+    Create a Private Subnet with 156 IP addresses:
+
+Follow similar steps as above but provide a different CIDR block (e.g., 10.0.1.0/25).
+    Create a Route Table and Associate it with the Subnets:
+
+Go to the Route Tables section in the VPC dashboard.
+    Click on "Create route table" and provide the VPC.
+    Once created, click on the "Routes" tab and add a route with destination 0.0.0.0/0 and target as the Internet Gateway.
+    Go to the "Subnet associations" tab and associate the public subnet with this route table.
+    Launch a Linux EC2 Instance using the VPC and Public Subnet:
+
+Go to the EC2 dashboard.
+    Click on "Launch Instance" and choose an Amazon Linux AMI or any other Linux distribution.
+    Select an instance type, configure instance details (choose the VPC and public subnet), add storage, configure security groups to allow SSH (port 22) traffic, and review and launch the instance.
+    Once the instance is launched, you can SSH into it using its public IP address or public DNS name.
+
+By following these steps, you will have set up a VPC with an Internet Gateway, created a public subnet with 256 IP addresses, a private subnet with 156 IP addresses, established a route table connecting the Internet Gateway and the subnets, and launched a Linux EC2 instance using the VPC and public subnet.
