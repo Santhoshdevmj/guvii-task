@@ -10,13 +10,13 @@ Push the script file to your GitHub repository:
 
 Initialize a new Git repository in your project directory, add the script file, commit the changes, and push them to your GitHub repository.
 
-           >git init
+            >git init
             >git add script.sh
             >git commit -m "Add script file"
-            >git remote add origin <your_github_repository_url>
+            >git remote add origin https://github.com/Santhoshdevmj/guvii-task/blob/master/task10-08-03-24
             >git push -u origin master
 
-Replace <your_github_repository_url> with the URL of your GitHub repository.
+Replace https://github.com/Santhoshdevmj/guvii-task/blob/master/task10-08-03-24 with the URL of your GitHub repository.
 
 Set up Jenkins and GitHub integration:
 
