@@ -1,0 +1,19 @@
+Launch a Windows VM in AWS:
+
+Log in to the AWS Management Console.
+Navigate to the EC2 dashboard.
+Click on the "Launch Instance" button.
+Choose an appropriate Windows Server AMI (Amazon Machine Image), such as "Microsoft Windows Server" or "Windows Server with Containers".
+Select an instance type, configure instance details, add storage, configure security groups to allow RDP (TCP port 3389), and review and launch the instance.
+Connect to the Windows VM via RDP:
+
+Once the instance is launched, note down its Public IPv4 address or Public DNS name.
+Use an RDP client (such as Microsoft Remote Desktop on Windows or Remote Desktop Connection on macOS) to connect to the Windows VM using the Public IPv4 address or Public DNS name.
+Enter the Administrator username and password when prompted to authenticate.
+Share system information using Command Prompt:
+
+Once connected to the Windows VM via RDP, open the Command Prompt by pressing Win + R, then typing cmd, and pressing Enter.
+In the Command Prompt, type the following command to display system information:
+cmd
+
+      >systeminfo
