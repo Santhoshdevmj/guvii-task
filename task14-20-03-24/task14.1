@@ -1,0 +1,36 @@
+Create an S3 Bucket:
+
+        Go to the Amazon S3 console.
+        Click on "Create bucket".
+        Enter a unique bucket name, select the region, and configure other settings as needed.
+        Make sure to uncheck "Block all public access" to ensure no public access to the bucket.
+        Upload Files to the Bucket:
+
+After creating the bucket, navigate into it.
+            Click on "Upload" to upload files from your local system to the bucket.
+            View S3 Bucket Access Logs Using CloudWatch:
+
+In the S3 bucket settings, enable access logging.
+        Choose an existing bucket where you want to store the access logs.
+        After enabling access logging, you can view the logs in Amazon CloudWatch Logs.
+
+Launch EC2 Instances:
+
+Go to the EC2 dashboard.
+        Click on "Launch Instance" to launch EC2 instances (you need to choose an AMI, instance type, configure instance details, add storage, configure security groups, etc.).
+        Launch two EC2 instances to use with the Application Load Balancer (ALB).
+        Create an Application Load Balancer (ALB):
+
+Go to the EC2 dashboard and select "Load Balancers" from the sidebar.
+        Click on "Create Load Balancer" and select "Application Load Balancer".
+        Configure the load balancer settings, including listener configurations (e.g., HTTP or HTTPS on port 80), security settings, target group, etc.
+        Register EC2 Instances with the ALB:
+
+After creating the ALB, register the EC2 instances with it by adding them to a target group.
+        Configure health checks to monitor the health of the instances.
+Configure Route53 (Optional):
+
+If you want to map a domain name to the load balancer, you can use Amazon Route 53 to create a DNS record and point it to the load balancer's DNS name.
+Access the Application using the ALB DNS Name:
+
+Once the instances are registered with the ALB and the ALB is successfully provisioned, you can access your application using the ALB's DNS name. The output traffic from the servers will be directed to the ALB's IP address.
