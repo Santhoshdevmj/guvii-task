@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Send a GET request to guvi.in and retrieve the HTTP status code
+http_code=$(curl -s -o /dev/null -w "%{http_code}" https://guvi.in)
+
+# Check the HTTP status code and print success/failure message
+if [ $http_code -eq 200 ]; then
+    echo "Success: HTTP status code is $http_code"
+else
+    echo "Failure: HTTP status code is $http_code"
+fi
