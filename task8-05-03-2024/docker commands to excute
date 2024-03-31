@@ -1,0 +1,11 @@
+Build the Docker image:
+Run the following command to build the Docker image:
+
+    >docker-compose build
+Push the image to Docker Hub:
+Tag the built image with your Docker Hub username and repository name:
+
+    >docker tag image_name santhoshdevmj/nginx:1
+Then, push the tagged image to Docker Hub:
+
+    >docker push santhoshdevmj/nginx:1
