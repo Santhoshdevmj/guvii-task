@@ -1,0 +1,35 @@
+Launch Jenkins:
+
+You can launch Jenkins using Docker. First, make sure you have Docker installed on your machine. Then, run the following command in your terminal:
+
+    >docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+
+This command will pull the latest LTS (Long Term Support) version of Jenkins from Docker Hub and start a container with Jenkins running. Port 8080 is exposed for accessing the Jenkins web interface, and port 50000 is used for Jenkins agent communication.
+
+Access Jenkins:
+
+Open a web browser and navigate to http://localhost:8080. You will be prompted to unlock Jenkins by entering the initial administrator password. You can find this password in the console output where Jenkins is running.
+
+Configure Jenkins:
+
+Follow the instructions on the Jenkins web interface to complete the setup process, including installing recommended plugins and creating an admin user.
+
+Explore Jenkins:
+
+Once Jenkins is set up, you can explore creating projects and users:
+
+Create a New Project:
+
+Click on "New Item" on the Jenkins dashboard.
+Enter a name for your project, select the type of project (e.g., Freestyle project, Pipeline), and click "OK".
+Configure the project settings such as source code management, build triggers, build steps, post-build actions, etc.
+Save the configuration to create the project.
+Create Users:
+
+Click on "Manage Jenkins" on the Jenkins dashboard.
+Click on "Manage Users" to view existing users and create new ones.
+Click on "Create User" to add a new user.
+Enter the user details such as username, full name, password, and email address, and click "Create User".
+Test Your Projects:
+
+After creating projects and users, you can test them by triggering builds, running pipelines, and exploring other Jenkins features.
