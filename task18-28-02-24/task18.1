@@ -1,0 +1,54 @@
+Syntax for all loops in shell scriptingn shell scripting, there are several ways to perform looping. Here are the syntaxes for the most common types of loops:
+
+For Loop:
+for item in list
+do
+  # Commands to be executed for each item in the list
+done
+Example:
+
+        for i in {1..5}
+        do
+        echo "Number: $i"
+        done
+
+While Loop:
+    while condition
+    do
+    # Commands to be executed as long as the condition is true
+    done
+Example:
+
+        num=1
+        while [ $num -le 5 ]
+        do
+        echo "Number: $num"
+        ((num++))
+        done
+
+Until Loop:
+    until condition
+    do
+    # Commands to be executed until the condition becomes true
+    done
+Example:
+
+        num=1
+        until [ $num -gt 5 ]
+        do
+        echo "Number: $num"
+        ((num++))
+        done
+
+C-Style For Loop:
+    for (( initialization; condition; increment ))
+    do
+    # Commands to be executed for each iteration
+    done
+Example:
+
+        for (( i=1; i<=5; i++ ))
+        do
+        echo "Number: $i"
+        done
+These are the basic looping constructs in shell scripting.
